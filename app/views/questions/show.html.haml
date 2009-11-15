@@ -1,0 +1,22 @@
+.interested_block
+  = partial :interested_user, :question => @question
+
+%h2 
+  = @question.title
+
+.question_body
+  = @question.body
+
+#answers
+  - for answer in @question.answers
+    .answer
+      = answer.relevancy_up_percent 
+      \% UP
+      = answer.relevancy_down_percent 
+      \% DOWN
+      posted by
+      = "#{answer.user}"
+      on 
+      = answer.created_at.strftime('%B %d, %Y %H:%M %p')
+      %div
+        = answer.body
