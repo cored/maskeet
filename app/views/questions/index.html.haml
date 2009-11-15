@@ -1,0 +1,12 @@
+%h1 popular questions
+- for question in @questions
+  .question
+    .interested_block
+      %div{:class=>"interested_mark", :id=>"mark_#{question.id}"}
+        = question.interests.size
+
+    %h2
+      = link_to question.title, url(:question, question)
+
+    .question_body
+      = question.body.truncate(200)
