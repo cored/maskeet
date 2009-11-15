@@ -1,0 +1,9 @@
+%h1 Edit Question
+= error_messages_for @question
+= form_for(@question, :action => url(:question, @question)) do
+  %p= text_field :title, :label => "Title: "  
+  %p= text_area :body, :label => "Body: "
+  %p= submit "Update"
+= link_to 'Show', url(:question, @question)
+|
+= link_to 'Back', url(:questions)
