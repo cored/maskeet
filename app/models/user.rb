@@ -13,5 +13,18 @@ class User
   
   property :id,     Serial
   property :login,  String
-  
+  property :first_name, String
+  property :last_name, String
+  property :email, String
+  timestamps :created_at
+
+  has n, :questions
+  has n, :answers
+  has n, :relevancies
+  has n, :interests
+  has n, :questions, :through => :interests
+
+  def to_s
+    "#{self.first_name} #{self.last_name}"
+  end 
 end
