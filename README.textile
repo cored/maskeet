@@ -1,0 +1,12 @@
+h1. Maskeet 
+
+I began with this documentaion effort because i did not find any good step by step tutorial to learn Merb.  
+The entire tutorial will be in the wiki page for this repository. 
+
+This tutorial is a port of the Askeet tutorial for the Symfony web framework (http://www.symfony-project.org/askeet/1_0/en).
+
+h1. Contribuiting
+
+You know the basics of contribuiting in Github just fork the project and begin throwing docs or code.
+
+Thanks 
